@@ -47,8 +47,17 @@ class FreeplayState extends MusicBeatState
 
 	private var CurrentSongIcon:FlxSprite;
 
-	private var Catagories:Array<String> = ['dave', 'joke', 'extras'];
-	var translatedCatagory:Array<String> = [LanguageManager.getTextString('freeplay_dave'), LanguageManager.getTextString('freeplay_joke'), LanguageManager.getTextString('freeplay_extra')];
+	private var Catagories:Array<String> = ['dave', 'joke', 'extras', 'dave2.5', 'classic', 'cover', 'fanmade', 'finale'];
+	var translatedCatagory:Array<String> = [
+		LanguageManager.getTextString('freeplay_dave'),
+		LanguageManager.getTextString('freeplay_joke'),
+		LanguageManager.getTextString('freeplay_extra'),
+		LanguageManager.getTextString('freeplay_dave2.5'),
+		LanguageManager.getTextString('freeplay_classic'),
+		LanguageManager.getTextString('freeplay_cover'),
+		LanguageManager.getTextString('freeplay_fanmade'),
+		LanguageManager.getTextString('freeplay_finale')
+	];
 
 	private var CurrentPack:Int = 0;
 	private var NameAlpha:Alphabet;
@@ -204,7 +213,7 @@ class FreeplayState extends MusicBeatState
 		}
 		if (FlxG.save.data.terminalFound && !awaitingExploitation)
 		{
-			Catagories = ['dave', 'joke', 'extras', 'dave2.5', 'classic', 'cover', 'fanmade', 'terminal'];
+			Catagories = ['dave', 'joke', 'extras', 'dave2.5', 'classic', 'cover', 'fanmade', 'finale', 'terminal'];
 			translatedCatagory = [
 				LanguageManager.getTextString('freeplay_dave'),
 				LanguageManager.getTextString('freeplay_joke'),
@@ -213,6 +222,7 @@ class FreeplayState extends MusicBeatState
 				LanguageManager.getTextString('freeplay_classic'),
 				LanguageManager.getTextString('freeplay_cover'),
 				LanguageManager.getTextString('freeplay_fanmade'),
+		                LanguageManager.getTextString('freeplay_finale'),
 				LanguageManager.getTextString('freeplay_terminal')];
 		}
 
