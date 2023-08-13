@@ -1689,16 +1689,11 @@ class BotPlay extends Option
 	public function new(desc:String)
 	{
 		super();
-		if (PlayState.isStoryMode)
-			description = 'BOTPLAY is disabled on Story Mode.'
-		else
-			description = desc;
+		description = desc;
 	}
 
 	public override function left():Bool
 	{
-		if (PlayState.isStoryMode)
-			return false;
 		FlxG.save.data.botplay = !FlxG.save.data.botplay;
 		trace('BotPlay : ' + FlxG.save.data.botplay);
 		display = updateDisplay();
